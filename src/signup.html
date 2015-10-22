@@ -17,12 +17,31 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+      <main class="container signup">
+
+        <section class="form-container">
+          <div class="buttons">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+          </div>
+          <form class="signup">
+            <fieldset>
+            <label>Display Name<input type="text" name="name" placeholder="J. Dub"/></label>
+            <label>Email<input type="text" name="email" placeholder="you@example.com"/></label>
+            <label>Password<input type="text" name="password" placeholder="********"/></label>
+            <label>Display Name<input type="text" name="confirm" placeholder="********"/></label>
+          </fieldset>
+          </form>
+          <div class="signup-button">
+            <a href="#">more sign up options</a>
+            <button class="sign-up"></button>
+            <p>By registering, you agree to the privacy policy and terms of service.</p>
+          </div>
+        </section>
+      </main>
+
+
 
 
         <!--bower:js-->
