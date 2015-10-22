@@ -22,30 +22,30 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <main class="container index">
-          <article class="question-box">
+        <main class="container index" ng-app='Stack-Undertow'>
+          <div class="question-box" ng-repeat="question in questions">
             <div class="stats">
                 <div class="votes">
-                  <p>{{placeholder}}</p>
+                  <p>{{question.placeholder}}</p>
                   <p>votes</p>
                 </div>
                 <div class="answers">
-                  <p>{{placeholder}}</p>
+                  <p>{{question.placeholder}}</p>
                   <p>answers</p>
                 </div>
             </div>
             <div class="question-summary">
               <h3>
-                <a href="#">{{placeholder}}</a>
+                <a href="#">{{question.title}}</a>
               </h3>
               <div class="excerpt">
-                {{placeholder}}
+                {{question.desc}}
               </div>
               <div class="misc">
-                {{placeholder}}{{placeholder}}
+                {{question.created_at}}{{question.member_id}}
               </div>
             </div>
-          </article>
+          </div>
           <section class="ask-question-box">
             <div class="ask-main">
               <form class="post-form">
