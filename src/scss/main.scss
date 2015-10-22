@@ -95,9 +95,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+$fa-font-path: '../../bower_components/font-awesome/fonts';
 
+// bower:scss
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
 
+@import 'index';
+@import 'login';
+@import 'signup';
+@import 'question';
 
+main.container {
+  @extend .grid;
+  margin: 0 auto;
+
+} // END main.container
 
 
 
