@@ -40,3 +40,19 @@ nav.tabs {
     }
   }
 }
+
+
+.panel {
+  display: none;
+
+    &.active {
+      display: inherit;
+
+      &::after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+
+    }
+}

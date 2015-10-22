@@ -30,11 +30,13 @@ header.signup {
       width: 97%;
       display: block;
       position: relative;
+      border-radius: 3px;
 
         .google {
           background: red;
           width: 49%;
           padding: 3% 3%;
+          border-radius: 3px;
         }
 
         .facebook {
@@ -42,6 +44,7 @@ header.signup {
           width: 49%;
           float: right;
           padding: 3% 3%;
+          border-radius: 3px;
         }
     }
 
