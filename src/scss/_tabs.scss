@@ -1,0 +1,59 @@
+a:link { //TAB LINKS
+    text-decoration: none;
+    color: #666;
+    font-size: 9pt;
+    font-family: arial;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #666;
+  font-size: 9pt;
+  font-family: arial;
+}
+
+a:active {
+  text-decoration:  none;
+  color: #000000;
+  font-size: 9pt;
+  font-family: arial;
+}
+
+
+nav.tabs {
+    border-bottom: 1px solid #e6e6e6;
+    margin-top: 3%;
+
+    a[href] { //TAB LINKS/LINE LOCATION
+      display: inline-block;
+      position: relative;
+      bottom: -3px;
+      font-size: 10pt;
+      padding: .75% 1%;
+
+
+      &.active {
+      border: 1px solid #ddd;
+      border-bottom: 4px solid #ffffff;
+      border-bottom-color: white;
+      color: #000000;
+      border-top: 2px solid #f69c55;
+    }
+  }
+}
+
+
+.panel {
+  display: none;
+
+    &.active {
+      display: inherit;
+
+      &::after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+
+    }
+}

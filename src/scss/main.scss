@@ -105,6 +105,7 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 @import 'login';
 @import 'signup';
 @import 'question';
+@import 'tabs';
 
 main.container {
   @extend .grid;
