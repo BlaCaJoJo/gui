@@ -22,7 +22,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <main class="container index" ng-app='Stack-Undertow'>
+          <div class="question-box">
+            <div class="stats">
+                <div class="votes">
+                  <!-- <p>{{question.placeholder}}</p> -->
+                  <p>votes</p>
+                </div>
+                <div class="answers">
+                  <!-- <p>{{question.placeholder}}</p> -->
+                  <p>answers</p>
+                </div>
+            </div>
+            <div class="question-summary">
+              <h3>
+                <a href="#">{{question.title}}</a>
+              </h3>
+              <div class="excerpt">
+                {{question.desc}}
+              </div>
+              <div class="misc">
+                {{question.created_at}}{{question.member_id}}
+              </div>
+            </div>
+          </div>
+          <section class="ask-question-box">
+            <div class="ask-main">
+              <form class="post-form">
+                  <input type="text" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title">
+                  <textarea class="ask-question" cols="92" rows="15"></textarea>
+              </form>
+              <input class="ask-button" type="submit" value="Post Your Question" tabindex="120">
+            </div>
+          </section>
+        </main>
 
 
         <!--bower:js-->
@@ -30,7 +63,7 @@
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/angular-route/angular-route.js"></script>
         <!--endbower-->
-        
+
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
