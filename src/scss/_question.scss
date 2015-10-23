@@ -27,19 +27,21 @@ article.question-content {
   padding-bottom: 30%;
 
   .votes-section {
-    outline: 1px solid #000000;
+    // outline: 1px solid #000000;
     width: 7%;
     float: left;
     text-align: center;
     display: block;
 
         .thumbs-up::before {
+          font-size: 15pt;
           content: "\f164";
           color: #808080;
           display: block;
         }
 
         .thumbs-down::after {
+          font-size: 15pt;
           content: "\f165";
           color: #808080;
           display: block;
@@ -49,7 +51,7 @@ article.question-content {
           font-size: 15pt;
           color: #808080;
           font-family: Arial;
-          margin: 12px auto;
+          margin: 10px auto;
         }
 
         .star::after {
@@ -58,13 +60,18 @@ article.question-content {
           color: #e6e6e6;
           display: block;
           clear: both;
-          margin-top: 16px;
+          margin-top: 20px;
+        }
+
+        p.star-number {
+          font-size: 10pt;
+          margin-top: 5px;
         }
 
   }
 
   section.details {
-    outline: 1px solid #000000;
+    // outline: 1px solid #000000;
     margin-left: 1%;
     float: left;
     display: block;
