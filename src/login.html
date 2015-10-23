@@ -17,12 +17,81 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+      <main class="container signup">
+        <header class="signup">
+          <h1>stack<strong>overflow</strong></h1>
+        </header>
+        <div class="main-content">
+          <nav class="tabs">
+            <a href="#panel-login" class="">Log in</a>
+            <a href="#panel-signup" class="active">Sign up</a>
+          </nav>
+
+      <div class="tab-content">
+        <section id="panel-signup" class="panel active">
+        <section class="form-container">
+          <div class="buttons">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+          </div>
+          <article class="line">
+            <hr class="or">
+            <p class="or">OR</p>
+          </article>
+          <form class="signup">
+            <fieldset>
+            <label>Display Name<input type="text" name="name" placeholder="J. Dub"/></label>
+            <label>Email<input type="text" name="email" placeholder="you@example.com"/></label>
+            <label>Password<input type="text" name="password" placeholder="********"/></label>
+            <label>Confirm Password<input type="text" name="confirm" placeholder="********"/></label>
+          </fieldset>
+          </form>
+          <div class="signup-button">
+            <a href="#">more sign up options</a>
+            <button class="sign-up">Sign up</button>
+            <p>By registering, you agree to the privacy policy and terms of service.</p>
+          </div>
+        </section> <!-- END .form-container -->
+
+        <section class="alternate">
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </section>
+      </section> <!-- END panel-signup -->
+
+      <section id="panel-login" class="panel"> <!-- panel-login -->
+        <section class="form-container">
+          <div class="buttons">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+          </div>
+          <article class="line">
+            <hr class="or">
+            <p class="or">OR</p>
+          </article>
+          <form class="signup">
+            <fieldset>
+            <label>Email<input type="text" name="email" placeholder="you@example.com"/></label>
+            <label>Password<input type="text" name="password" placeholder="********"/></label>
+          </fieldset>
+          </form>
+          <div class="signup-button">
+            <a href="#">more login options</a>
+            <button class="sign-up">Log in</button>
+            <p>By registering, you agree to the privacy policy and terms of service.</p>
+          </div>
+        </section> <!-- END .form-container -->
+
+        <section class="alternate">
+          <p>Don't have an account? <a href="#">Sign up</a></p>
+        </section>
+      </section> <!-- END panel-login -->
+
+      </div> <!-- END .tab-content -->
+    </div>
+  </main>
+
+
 
 
         <!--bower:js-->
