@@ -1,6 +1,6 @@
 {
   "firebase": "blacajojo--gui",
-  "public": "src",
+  "public": "dist",
   "ignore": [
     "firebase.json",
     "**/.*",
