@@ -103,12 +103,13 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 
 @import 'index';
 @import 'login';
-@import 'signup';
 @import 'question';
+@import 'tabs';
 
 main.container {
   @extend .grid;
   margin: 0 auto;
+  width: 80%;
 
 } // END main.container
 
