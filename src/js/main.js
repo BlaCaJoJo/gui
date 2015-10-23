@@ -4,6 +4,12 @@
 
 
 
+
+
+
+
+
+
 // TABS
 $('.tabs').each(function(){ //iterates through each ahref
   $('.tab-content').each(function(){ //iterates through the corresponding content
