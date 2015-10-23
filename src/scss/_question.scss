@@ -1,0 +1,43 @@
+main.container.question {
+  width: 80%;
+}
+
+header.signup {
+    h1 {
+      font-weight: lighter;
+    }
+}
+
+
+.main-content {
+  box-sizing: border-box;
+  display: block;
+}
+
+h2.question {
+  border-bottom: 1px solid #e6e6e6;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-weight: normal;
+}
+
+.question-content {
+  outline: 1px solid #000000;
+  padding-bottom: 40%;
+  width: 100%;
+}
+
+.votes-section {
+  outline: 1px solid #000000;
+  padding-bottom: 40%;
+  width: 7%;
+  float: left;
+}
+
+section.details {
+  outline: 1px solid #000000;
+  margin-left: 1%;
+  float: left;
+  display: block;
+  width: 60%;
+}
