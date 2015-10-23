@@ -110,6 +110,7 @@ $fa-font-path: '../../bower_components/font-awesome/fonts';
 main.container {
   @extend .grid;
   margin: 0 auto;
+  width: 80%;
 
 } // END main.container
 
