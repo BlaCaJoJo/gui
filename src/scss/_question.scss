@@ -21,23 +21,60 @@ h2.question {
   font-weight: normal;
 }
 
-.question-content {
+article.question-content {
   outline: 1px solid #000000;
-  padding-bottom: 40%;
   width: 100%;
-}
+  padding-bottom: 30%;
 
-.votes-section {
-  outline: 1px solid #000000;
-  padding-bottom: 40%;
-  width: 7%;
-  float: left;
-}
+  .votes-section {
+    outline: 1px solid #000000;
+    width: 7%;
+    float: left;
+    text-align: center;
+    display: block;
 
-section.details {
-  outline: 1px solid #000000;
-  margin-left: 1%;
-  float: left;
-  display: block;
-  width: 60%;
+        .thumbs-up::before {
+          content: "\f164";
+          color: #808080;
+          display: block;
+        }
+
+        .thumbs-down::after {
+          content: "\f165";
+          color: #808080;
+          display: block;
+        }
+
+        p {
+          font-size: 15pt;
+          color: #808080;
+          font-family: Arial;
+          margin: 12px auto;
+        }
+
+        .star::after {
+          font-size: 20pt;
+          content: "\f005";
+          color: #e6e6e6;
+          display: block;
+          clear: both;
+          margin-top: 16px;
+        }
+
+  }
+
+  section.details {
+    outline: 1px solid #000000;
+    margin-left: 1%;
+    float: left;
+    display: block;
+    width: 60%;
+
+      p {
+        font-size: 11pt;
+        margin-top: 0;
+      }
+
+  }
+
 }
