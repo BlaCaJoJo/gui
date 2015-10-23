@@ -9,12 +9,12 @@ cp src/question.html dist/
 # mkdir dist/partials/
 # cp -r src/partials dist/
 
-echo 'Step 2: Copy CSS into `dist/`?'
-mkdir dist/css/
-cp src/css/main.css dist/css/
-
 echo 'Step 2a: Build all the Sass into CSS!'
 npm run sass
+
+echo 'Step 2b: Copy CSS into `dist/`?'
+mkdir dist/css/
+cp src/css/main.css dist/css/
 
 echo 'Step 3: Copy all the JS'
 mkdir -p dist/js && cp -r src/js dist/
@@ -37,4 +37,4 @@ cp bower_components/angular-route/angular-route.js dist/bower_components/angular
 
 cp questions.json dist/
 
-npm start
+npm run start:dist
