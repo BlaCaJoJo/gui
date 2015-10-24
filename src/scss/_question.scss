@@ -31,7 +31,7 @@ article.question-content {
     width: 7%;
     float: left;
     text-align: center;
-    display: block;
+    display: block !important;
 
         .thumbs-up::before {
           font-size: 15pt;
@@ -61,6 +61,7 @@ article.question-content {
           display: block;
           clear: both;
           margin-top: 20px;
+          display: block !important;
         }
 
         p.star-number {
