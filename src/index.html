@@ -34,14 +34,16 @@
             <header class="signup">
                 <h1>stack<strong>overflow</strong></h1>
             </header>
-          <div class="question-box">
+          <div class="grid">
+            <div class="col-2-3">
+          <div class="question-box" ng-repeat="question in questions">
             <div class="stats">
                 <div class="votes">
-                  <!-- <p>{{question.placeholder}}</p> -->
+                  <p>{{question.placeholder}}</p>
                   <p>votes</p>
                 </div>
                 <div class="answers">
-                  <!-- <p>{{question.placeholder}}</p> -->
+                  <p>{{question.placeholder}}</p>
                   <p>answers</p>
                 </div>
             </div>
@@ -53,7 +55,8 @@
                 {{question.desc}}
               </div>
               <div class="misc">
-                {{question.created_at}}{{question.member_id}}
+                <p class="created_at">{{question.created_at}}&nbsp;ago</p>
+                <p class="member_id">by&nbsp;{{question.member_id}}</p>
               </div>
             </div>
           </div>
@@ -66,7 +69,11 @@
               <input class="ask-button" type="submit" value="Post Your Question" tabindex="120">
             </div>
           </section>
+        </div>
+        <div class="col-1-3">
+        </div>
           </div> <!-- END .MAIN-CONTENT -->
+          </div>
         </main>
 
 
