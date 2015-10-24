@@ -1,3 +1,18 @@
+.nav-main {
+  width: 100%;
+  background-color: black;
+  height: 20%;
+  .nav-links {
+    text-align: right;
+    text-decoration: none;
+    a {
+      padding: 2px 5px 2px 5px;
+      margin: 0 5px 0 0;
+      cursor: pointer;
+      color: #FFFFFF;
+    }
+  }
+}
 .index {
   width:100%;
 }
