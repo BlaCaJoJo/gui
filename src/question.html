@@ -22,7 +22,39 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <main class="container question" ng-app='Stack-Undertow'>
+          <header class="signup">
+            <h1>stack<strong>overflow</strong></h1>
+          </header>
+          <div class="main-content">
+            <h2 class="question">{{question.title}}</h2>
+            <article class="question-content">
+              <div class="votes-section">
+                <section>
+                <a class="fa thumbs-up"></a>
+                <p class="number"><strong>15</strong></p>
+                <a class="fa thumbs-down"></a>
+              </section>
+                <a class="fa star"></a>
+                <p class="star-number">5</p>
+              </div> <!-- END .VOTES-SECTION -->
+              <section class="details">
+                <p class="details">I am trying to create an overlay for responsive images in a horizontal gallery. The overlay div in the li has position and a large z-index value but still displays on background of the image. When I try to do absolute for an image with higher z-index the horizontal scrolling for image fails.</p>
+              </section>
+            </article>
+            <article class="answer-content">
+              <h3 class="answer">5 Answers</h3>
+              <div class="votes-section">
+                <a class="fa thumbs-up"></a>
+                <p class="number"><strong>0</strong></p>
+                <a class="fa thumbs-down"></a>
+              </div>
+              <section class="details">
+                <p class="details">here I made some modifications to your code: 1. I used JQuery to adjust the width of the overlay element on window re-size event so that it would keep its responsive behavior</p>
+              </section>
+            </article> <!-- END .ANSWERS -->
+          </div> <!-- END .MAIN-CONTENT-->
+        </main>
 
 
         <!--bower:js-->
