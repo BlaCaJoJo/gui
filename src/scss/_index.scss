@@ -76,10 +76,18 @@
     .misc {
       line-height: 18px;
       float: left;
-      height: 35px;
-      width: 190px;
+      height: 40px;
+      width: 100%;
       color: #999;
       text-align: left;
+      .created_at {
+        float: left;
+        width: 30%;
+      }
+      .member_id {
+        float: left;
+        width: 30%;
+      }
     }
   }
 }

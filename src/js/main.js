@@ -25,7 +25,7 @@
       $http.get('../questions.json')
         .then(function (response){
           console.log(arguments);
-          $rootScope.question = response.data[0];
+          $rootScope.questions = response.data;
           });
         });
 })(); //END IIFE
