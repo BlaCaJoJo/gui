@@ -4,13 +4,24 @@
 
   angular.module('Stack-Undertow', [ ])
     .run(function($http, $rootScope){
-      // $http.get('https://blacajojo.herokuapp.com/questions')
-      $http.get('../questions.json')
+      $http.get('https://blacajojo.herokuapp.com/questions')
+      // $http.get('../questions.json')
         .then(function (response){
           console.log(arguments);
-          $rootScope.questions = response.data;
+          $rootScope.question = response.data[0];
+
           });
-        });
+        })
+
+          .run(function($http, $rootScope){
+             $http.get('https://blacajojo.herokuapp.com/answers')
+               .then(function (response){
+                 console.log(arguments);
+                 $rootScope.answers = response.data;
+                 });
+               });
+
+
 
 })(); //END IIFE
 
