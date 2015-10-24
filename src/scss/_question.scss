@@ -11,78 +11,101 @@ header.signup {
 
 .main-content {
   box-sizing: border-box;
-  display: block;
+  display: table;
+  content: "";
+  clear: both;
 }
 
 h2.question {
   border-bottom: 1px solid #e6e6e6;
-  padding-top: 2%;
   padding-bottom: 1%;
   font-weight: normal;
+}
+
+
+.votes-section {
+  // outline: 1px solid #000000;
+  width: 7%;
+  float: left;
+  text-align: center;
+  display: block !important;
+
+      .thumbs-up::before {
+        font-size: 15pt;
+        content: "\f164";
+        color: #808080;
+        display: block;
+      }
+
+      .thumbs-down::after {
+        font-size: 15pt;
+        content: "\f165";
+        color: #808080;
+        display: block;
+      }
+
+      p {
+        font-size: 15pt;
+        color: #808080;
+        font-family: Arial;
+        margin: 10px auto;
+      }
+
+      .star::after {
+        font-size: 20pt;
+        content: "\f005";
+        color: #e6e6e6;
+        display: block;
+        clear: both;
+        margin-top: 20px;
+        display: block !important;
+      }
+
+      p.star-number {
+        font-size: 10pt;
+        margin-top: 5px;
+      }
+
+}
+
+
+section.details {
+  // outline: 1px solid #000000;
+  margin-left: 1%;
+  float: left;
+  display: block;
+  width: 60%;
+
+    p {
+      font-size: 11pt;
+      margin-top: 0;
+    }
+
 }
 
 article.question-content {
   outline: 1px solid #000000;
   width: 100%;
-  padding-bottom: 30%;
+  // border-bottom: 1px solid #e6e6e6;
+  float: left;
+  display: block;
 
-  .votes-section {
-    // outline: 1px solid #000000;
-    width: 7%;
-    float: left;
-    text-align: center;
-    display: block !important;
+} // END .question-content
 
-        .thumbs-up::before {
-          font-size: 15pt;
-          content: "\f164";
-          color: #808080;
-          display: block;
-        }
+article.answer-content {
+  // outline: 1px solid #000000;
+  margin-top: 5%;
+  width: 100%;
+  float: left;
+  display: block;
 
-        .thumbs-down::after {
-          font-size: 15pt;
-          content: "\f165";
-          color: #808080;
-          display: block;
-        }
-
-        p {
-          font-size: 15pt;
-          color: #808080;
-          font-family: Arial;
-          margin: 10px auto;
-        }
-
-        .star::after {
-          font-size: 20pt;
-          content: "\f005";
-          color: #e6e6e6;
-          display: block;
-          clear: both;
-          margin-top: 20px;
-          display: block !important;
-        }
-
-        p.star-number {
-          font-size: 10pt;
-          margin-top: 5px;
-        }
-
+  h3.answer {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 1%;
+    font-weight: normal;
   }
 
-  section.details {
-    // outline: 1px solid #000000;
-    margin-left: 1%;
-    float: left;
-    display: block;
-    width: 60%;
 
-      p {
-        font-size: 11pt;
-        margin-top: 0;
-      }
 
-  }
 
-}
+} // END .answer-content
