@@ -40,10 +40,14 @@
               </div> <!-- END .VOTES-SECTION -->
               <section class="details">
                 <p class="details">{{question.desc}}</p>
+                <div class="user">
+                  <p class="created_at">{{question.created_at}}&nbsp;ago</p>
+                  <p class="member_id">by&nbsp;{{question.member_id}}</p>
+                </div>
               </section>
             </article>
+            <h3 class="answer">10 Answers</h3>
             <article class="answer-content" ng-repeat="answer in answers">
-              <h3 class="answer">5 Answers</h3>
               <div class="votes-section">
                 <a class="fa thumbs-up"></a>
                 <p class="number"><strong>0</strong></p>
@@ -51,6 +55,10 @@
               </div>
               <section class="details">
                 <p class="details">{{answer.desc}}</p>
+                <div class="user">
+                  <p class="created_at">{{answer.created_at}}&nbsp;ago</p>
+                  <p class="member_id">by&nbsp;{{answer.member_id}}</p>
+                </div>
               </section>
             </article> <!-- END .ANSWERS -->
           </div> <!-- END .MAIN-CONTENT-->

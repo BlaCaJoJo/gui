@@ -1,26 +1,50 @@
 
-// js for the index page
+
 ;(function(){
 
   angular.module('Stack-Undertow', [ ])
+
+    // INDEX
     .run(function($http, $rootScope){
       $http.get('https://blacajojo.herokuapp.com/questions')
       // $http.get('../questions.json')
         .then(function (response){
           console.log(arguments);
-          $rootScope.question = response.data[0];
+          $rootScope.questions = response.data;
 
           });
         })
 
+
+        // QUESTION SHOW
+        .run(function($http, $rootScope){
+          $http.get('https://blacajojo.herokuapp.com/questions')
+          // $http.get('../questions.json')
+            .then(function (response){
+              console.log(arguments);
+              $rootScope.question = response.data[0];
+
+              });
+            })
+
+          // ANSWERS
           .run(function($http, $rootScope){
              $http.get('https://blacajojo.herokuapp.com/answers')
                .then(function (response){
                  console.log(arguments);
                  $rootScope.answers = response.data;
                  });
-               });
+               })
 
+
+          // VOTES
+           .run(function($http, $rootScope){
+              $http.get('https://blacajojo.herokuapp.com/votes')
+                .then(function (response){
+                  console.log(arguments);
+                  $rootScope.votes = response.data;
+                  });
+                });
 
 
 })(); //END IIFE
