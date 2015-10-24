@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browser-sync start --server --directory --files='src/*.html, src/main.css'",
+    "start:dist": "browser-sync start --server dist",
     "sass": "node-sass src/scss/main.scss src/css/main.css",
     "install:bower": "bower install --save",
     "postinstall:bower": "wiredep --src 'src/*.html'",
