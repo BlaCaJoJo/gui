@@ -1,19 +1,62 @@
 
-// js for the index page
+
 ;(function(){
 
   angular.module('Stack-Undertow', [ ])
+    .controller("login-Controller", function($scope, $http){
+        $scope.formvalues= {
+          name: "",
+          email: "",
+          password: "",
+          confirmpassword: ""
+        };
+    $scope.submit= function(){
+      $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
+      .then(function (response){
+        console.log("can you hear me? please god hear me",response);
+      });
+    };
+  })
+
+    // INDEX
     .run(function($http, $rootScope){
-      // $http.get('https://blacajojo.herokuapp.com/questions')
-      $http.get('../questions.json')
+      $http.get('https://blacajojo.herokuapp.com/questions')
+      // $http.get('../questions.json')
         .then(function (response){
           console.log(arguments);
           $rootScope.questions = response.data;
+
           });
-        });
+        })
+
+
+        // QUESTION SHOW
+        .run(function($http, $rootScope){
+          $http.get('https://blacajojo.herokuapp.com/questions')
+          // $http.get('../questions.json')
+            .then(function (response){
+              console.log(arguments);
+              $rootScope.question = response.data[0];
+
+              });
+            })
+
+          // ANSWERS
+          .run(function($http, $rootScope){
+             $http.get('https://blacajojo.herokuapp.com/answers')
+               .then(function (response){
+                 console.log(arguments);
+                 $rootScope.answers = response.data;
+                 });
+               });
+
+
+
+
+
+
 
 })(); //END IIFE
-
 
 
 

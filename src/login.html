@@ -24,7 +24,7 @@
           <a href="https://blacajojo--gui.firebaseapp.com/">Questions</a>
         </div>
       </nav>
-      <main class="container signup">
+      <main class="container signup" ng-app='Stack-Undertow' ng-controller="login-Controller">
         <header class="signup">
           <h1>stack<strong>overflow</strong></h1>
         </header>
@@ -45,17 +45,17 @@
             <hr class="or">
             <p class="or">OR</p>
           </article>
-          <form class="signup">
+          <form class="signup" ng-submit='submit()' name="login">
             <fieldset>
-            <label>Display Name<input type="text" name="name" placeholder="J. Dub"/></label>
-            <label>Email<input type="text" name="email" placeholder="you@example.com"/></label>
-            <label>Password<input type="text" name="password" placeholder="********"/></label>
-            <label>Confirm Password<input type="text" name="confirm" placeholder="********"/></label>
+            <label>Display Name<input type="text" name="name" placeholder="J. Dub" ng-model="formvalues.name"/></label>
+            <label>Email<input type="text" name="email" placeholder="you@example.com" ng-model="formvalues.email" /></label>
+            <label>Password<input type="text" name="password" placeholder="********" ng-model="formvalues.password" /></label>
+            <label>Confirm Password<input type="text" name="confirm" placeholder="********" ng-model="formvalues.confirmpassword"/></label>
           </fieldset>
           </form>
           <div class="signup-button">
             <a href="#">more sign up options</a>
-            <button class="sign-up">Sign up</button>
+            <button type="submit" class="sign-up">Sign up</button>
             <p>By registering, you agree to the privacy policy and terms of service.</p>
           </div>
         </section> <!-- END .form-container -->
@@ -63,6 +63,7 @@
         <section class="alternate">
           <p>Already have an account? <a href="#">Log in</a></p>
         </section>
+
       </section> <!-- END panel-signup -->
 
       <section id="panel-login" class="panel"> <!-- panel-login -->
@@ -77,8 +78,8 @@
           </article>
           <form class="signup">
             <fieldset>
-            <label>Email<input type="text" name="email" placeholder="you@example.com"/></label>
-            <label>Password<input type="text" name="password" placeholder="********"/></label>
+            <label>Email<input type="text" name="email" placeholder="you@example.com" ng-model="formvalues.email" /></label>
+            <label>Password<input type="text" name="password" placeholder="********" ng-model="formvalues.password" /></label>
           </fieldset>
           </form>
           <div class="signup-button">

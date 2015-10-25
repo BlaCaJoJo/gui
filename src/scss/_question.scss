@@ -89,25 +89,41 @@ article.question-content {
   border-bottom: 1px solid #e6e6e6;
   float: left;
   display: block;
+  margin-bottom: 5%;
 
 } // END .question-content
 
+
+h3.answer {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 1%;
+  font-weight: normal;
+}
+
 article.answer-content {
-  // outline: 1px solid #000000;
-  margin-top: 5%;
   width: 100%;
   float: left;
   display: block;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 2%;
-
-  h3.answer {
-    border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 1%;
-    font-weight: normal;
-  }
-
-
+  padding-top: 2%;
 
 
 } // END .answer-content
+
+div.user {
+  line-height: 18px;
+  float: left;
+  height: 40px;
+  width: 100%;
+  color: #999;
+  text-align: left;
+  .created_at {
+    float: left;
+    width: 30%;
+  }
+  .member_id {
+    float: left;
+    width: 30%;
+  }
+}
