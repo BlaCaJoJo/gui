@@ -38,6 +38,7 @@ header.signup {
   padding: 5%;
   width: 40%;
   margin: 5% auto 2%;
+  min-width: 300px;
 
     .buttons {
       margin: 0 auto;
@@ -73,6 +74,7 @@ header.signup {
       margin: 0 auto;
       text-align: left;
       padding-bottom: 5%;
+
 
 
 
@@ -135,7 +137,8 @@ header.signup {
 .alternate {
   border: 1px solid #e6e6e6;
   padding: 1%;
-  width: 48%;
+  width: 40%;
+  min-width: 300px;
   margin: 1% auto;
   margin-bottom: 5%;
 
