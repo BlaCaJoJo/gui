@@ -19,6 +19,7 @@
                 </div>
               </section>
             </article>
+
             <h3 class="answer">10 Answers</h3>
             <article class="answer-content" ng-repeat="answer in answers">
               <div class="votes-section">
@@ -34,4 +35,15 @@
                 </div>
               </section>
             </article> <!-- END .ANSWERS -->
+
+            <section class="answer-question-box">
+              <div class="ask-main">
+                <form class="post-form">
+                    <input type="text" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title">
+                    <textarea class="answer-question" cols="92" rows="15"></textarea>
+                </form>
+                <input class="ask-button" type="submit" value="Post Your Question" tabindex="120">
+              </div>
+            </section>
+
           </div> <!-- END .MAIN-CONTENT-->
