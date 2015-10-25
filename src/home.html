@@ -1,0 +1,42 @@
+<div class="main-content">
+
+  <div class="grid">
+    <div class="col-2-3">
+  <div class="question-box" ng-repeat="question in questions">
+    <div class="stats">
+        <div class="votes">
+          <p>{{question.placeholder}}</p>
+          <p>votes</p>
+        </div>
+        <div class="answers">
+          <p>{{question.placeholder}}</p>
+          <p>answers</p>
+        </div>
+    </div>
+    <div class="question-summary">
+      <h3>
+        <a href="#">{{question.title}}</a>
+      </h3>
+      <div class="excerpt">
+        {{question.desc}}
+      </div>
+      <div class="misc">
+        <p class="created_at">{{question.created_at}}&nbsp;ago</p>
+        <p class="member_id">by&nbsp;{{question.member_id}}</p>
+      </div>
+    </div>
+  </div>
+  <section class="ask-question-box">
+    <div class="ask-main">
+      <form class="post-form">
+          <input type="text" tabindex="100" placeholder="What's your programming question? Be specific." class="ask-title">
+          <textarea class="ask-question" cols="92" rows="15"></textarea>
+      </form>
+      <input class="ask-button" type="submit" value="Post Your Question" tabindex="120">
+    </div>
+  </section>
+  </div>
+  <div class="col-1-3">
+  </div>
+  </div> <!-- END .GRID -->
+</div> <!-- END .MAIN-CONTENT -->

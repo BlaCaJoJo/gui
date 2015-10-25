@@ -2,15 +2,33 @@
 
 ;(function(){
 
-  angular.module('Stack-Undertow', [ ])
+angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
+    // app.controller('stackController', function($http, $routeParams){
+    $routeProvider.when('/', {
+      templateUrl: 'home.html',
+      // controller: 'stackController'
+    })
 
-  .controller("login-Controller", function($scope, $http){
+    .when('/login', {
+      templateUrl: 'login.html',
+      // controller: 'stackController'
+    })
+
+    .when('/question', {
+      templateUrl: 'question.html',
+      // controller: 'stackController'
+    });
+
+  // }) //END .MODULE
+}) //END stackController
+
+  .controller("loginController", function($scope, $http){
     $scope.formvalues= {
       name: "",
       email: "",
       password: "",
       confirmpassword: ""
-    }
+    };
 
     $scope.submit= function(){
       $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
@@ -22,7 +40,6 @@
 
 
     // INDEX
-
     .run(function($http, $rootScope){
       $http.get('https://blacajojo.herokuapp.com/questions')
       // $http.get('../questions.json')
@@ -61,7 +78,6 @@
 
 
 })(); //END IIFE
-
 
 
 
