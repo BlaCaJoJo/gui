@@ -19,8 +19,10 @@
                 </div>
               </section>
             </article>
+
+
             <h3 class="answer">10 Answers</h3>
-            <article class="answer-content" ng-repeat="answer in answers">
+            <article class="answer-content" ng-repeat="answer in answers | orderBy: 'updated_at'">
               <div class="votes-section">
                 <a class="fa thumbs-up"></a>
                 <p class="number"><strong>0</strong></p>
@@ -34,4 +36,15 @@
                 </div>
               </section>
             </article> <!-- END .ANSWERS -->
+
+            <h3 class="your">Your Answer</h3>
+            <section class="answer-question-box" ng-submit="add()">
+              <div class="answer-main">
+                <form class="post-form">
+                    <textarea ng-model="answer.body" value="{{answer.body}}" class="answer-question" cols="92" rows="15"></textarea>
+                </form>
+                <input class="answer-button" type="submit" value="Post Your Answer" tabindex="120">
+              </div>
+            </section>
+
           </div> <!-- END .MAIN-CONTENT-->
