@@ -25,8 +25,7 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
     })
 
     .when('/panel-signup', {
-
-      templateUrl: 'login.html',
+      templateUrl: 'signup.html',
       // controller: 'stackController'
     });
 
