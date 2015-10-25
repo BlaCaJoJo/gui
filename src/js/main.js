@@ -9,18 +9,29 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
       // controller: 'stackController'
     })
 
-    .when('/login', {
+    .when('/question', {
+      templateUrl: 'question.html',
+      // controller: 'stackController'
+    })
+
+    .when('/home', {
+      templateUrl: 'home.html',
+      // controller: 'stackController'
+    })
+
+    .when('/panel-login', {
       templateUrl: 'login.html',
       // controller: 'stackController'
     })
 
-    .when('/question', {
-      templateUrl: 'question.html',
+    .when('/panel-signup', {
+
+      templateUrl: 'login.html',
       // controller: 'stackController'
     });
 
-  // }) //END .MODULE
-}) //END stackController
+
+}) //END .MODULE
 
   .controller("loginController", function($scope, $http){
     $scope.formvalues= {
