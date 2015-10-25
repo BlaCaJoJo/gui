@@ -5,34 +5,34 @@
               <div class="votes-section">
                 <section>
                 <a class="fa thumbs-up"></a>
-                <p class="number"><strong>15</strong></p>
+                <p class="number"><strong>{{question.vote_rating}}</strong></p>
                 <a class="fa thumbs-down"></a>
               </section>
                 <a class="fa star"></a>
                 <p class="star-number">5</p>
               </div> <!-- END .VOTES-SECTION -->
               <section class="details">
-                <p class="details">{{question.desc}}</p>
+                <p class="details">{{question.description}}</p>
                 <div class="user">
-                  <p class="created_at">{{question.created_at}}&nbsp;ago</p>
-                  <p class="member_id">by&nbsp;{{question.member_id}}</p>
+                  <p class="created_at">{{question.date}}</p>
+                  <p class="member_id">by&nbsp;{{question.member_name}}</p>
                 </div>
               </section>
             </article>
 
 
             <h3 class="answer">10 Answers</h3>
-            <article class="answer-content" ng-repeat="answer in answers | orderBy: 'updated_at'">
+            <article class="answer-content" ng-repeat="answers in questions | orderBy: 'updated_at'">
               <div class="votes-section">
                 <a class="fa thumbs-up"></a>
-                <p class="number"><strong>0</strong></p>
+                <p class="number"><strong>{{answers.vote_rating}}</strong></p>
                 <a class="fa thumbs-down"></a>
               </div>
               <section class="details">
-                <p class="details">{{answer.desc}}</p>
+                <p class="details">{{answers.desc}}</p>
                 <div class="user">
-                  <p class="created_at">{{answer.created_at}}&nbsp;ago</p>
-                  <p class="member_id">by&nbsp;{{answer.member_id}}</p>
+                  <p class="created_at">{{answers.date}}</p>
+                  <p class="member_id">by&nbsp;{{answers.member_name}}</p>
                 </div>
               </section>
             </article> <!-- END .ANSWERS -->

@@ -51,7 +51,6 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
         .then(function (response){
           console.log(arguments);
           $rootScope.questions = response.data;
-
           });
         })
 
@@ -62,19 +61,21 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
           // $http.get('../questions.json')
             .then(function (response){
               console.log(arguments);
-              $rootScope.question = response.data[0];
+              $rootScope.question = response.data[2];
+
 
               });
             })
 
           // ANSWERS
           .run(function($http, $rootScope){
-             $http.get('https://blacajojo.herokuapp.com/answers')
-               .then(function (response){
-                 console.log(arguments);
-                 $rootScope.answers = response.data;
-                 });
-               });
+            $http.get('https://blacajojo.herokuapp.com/questions/3')
+            // $http.get('../questions.json')
+              .then(function (response){
+                console.log(arguments);
+                $rootScope.answers = response.data[2];
+                });
+              });
 
 
 
