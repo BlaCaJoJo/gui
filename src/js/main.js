@@ -3,30 +3,25 @@
 ;(function(){
 
 angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
-    // app.controller('stackController', function($http, $routeParams){
     $routeProvider.when('/', {
       templateUrl: 'home.html',
-      // controller: 'stackController'
+
     })
 
     .when('/question', {
       templateUrl: 'question.html',
-      // controller: 'stackController'
     })
 
     .when('/home', {
       templateUrl: 'home.html',
-      // controller: 'stackController'
     })
 
     .when('/panel-login', {
       templateUrl: 'login.html',
-      // controller: 'stackController'
     })
 
     .when('/panel-signup', {
       templateUrl: 'signup.html',
-      // controller: 'stackController'
     });
 
 
