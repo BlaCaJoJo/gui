@@ -3,13 +3,15 @@
 ;(function(){
 
   angular.module('Stack-Undertow', [ ])
-    .controller("login-Controller", function($scope, $http){
-        $scope.formvalues= {
-          name: "",
-          email: "",
-          password: "",
-          confirmpassword: ""
-        };
+
+  .controller("login-Controller", function($scope, $http){
+    $scope.formvalues= {
+      name: "",
+      email: "",
+      password: "",
+      confirmpassword: ""
+    }
+
     $scope.submit= function(){
       $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
       .then(function (response){
@@ -18,7 +20,9 @@
     };
   })
 
+
     // INDEX
+
     .run(function($http, $rootScope){
       $http.get('https://blacajojo.herokuapp.com/questions')
       // $http.get('../questions.json')
