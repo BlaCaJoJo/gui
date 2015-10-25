@@ -3,6 +3,20 @@
 ;(function(){
 
   angular.module('Stack-Undertow', [ ])
+  .controller("login-Controller", function($scope, $http){
+    $scope.formvalues= {
+      name: "",
+      email: "",
+      password: "",
+      confirmpassword: ""
+    }
+    $scope.submit= function(){
+      $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
+      .then(function (response){
+        console.log("can you hear me? please god hear me",response);
+      });
+    };
+  })
     .run(function($http, $rootScope){
       $http.get('https://blacajojo.herokuapp.com/questions')
       // $http.get('../questions.json')
@@ -11,6 +25,8 @@
           $rootScope.questions = response.data;
           });
         });
+
+
 
 })(); //END IIFE
 
