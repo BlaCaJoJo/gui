@@ -4,6 +4,7 @@
 
   angular.module('Stack-Undertow', [ ])
 
+
     // INDEX
     .run(function($http, $rootScope){
       $http.get('https://blacajojo.herokuapp.com/questions')
@@ -34,21 +35,15 @@
                  console.log(arguments);
                  $rootScope.answers = response.data;
                  });
-               })
+               });
 
 
-          // VOTES
-           .run(function($http, $rootScope){
-              $http.get('https://blacajojo.herokuapp.com/votes')
-                .then(function (response){
-                  console.log(arguments);
-                  $rootScope.votes = response.data;
-                  });
-                });
+
+
+
 
 
 })(); //END IIFE
-
 
 
 
