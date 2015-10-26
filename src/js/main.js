@@ -39,7 +39,14 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
       })
 
 
-  .controller("loginController", function($scope, $http){
+  .controller('mainController', function($scope, $route, $routeParams, $location) {
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
+  })
+
+
+  .controller('loginController', function($scope, $http){
     $scope.formvalues= {
       name: "",
       email: "",
@@ -49,16 +56,10 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
 
     $scope.submit= function(){
       $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
-      .then(function (response){
+      .then(function (){
 
       });
     };
-  })
-
-  .controller('mainController', function($scope, $route, $routeParams, $location) {
-    $scope.$route = $route;
-    $scope.$location = $location;
-    $scope.$routeParams = $routeParams;
   })
 
   .controller('questionController', function($http, $scope, $routeParams) {
@@ -71,6 +72,11 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
         $scope.question = response.data[id];
         $scope.answer = response.data[id].answer;
       });
+
+      $http.get('https://blacajojo.herokuapp.com/answers')
+        .then(function (response){
+          $scope.answer = response.data[id].answer;
+        });
 
   })
 
