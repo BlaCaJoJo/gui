@@ -27,6 +27,19 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
 
 }) //END .MODULE
 
+
+  // INDEX
+  .run(function($http, $rootScope){
+    $http.get('https://blacajojo.herokuapp.com/questions')
+    // $http.get('../questions.json')
+      .then(function (response){
+        console.log(arguments);
+        $rootScope.questions = response.data;
+        });
+      })
+
+
+
   .controller("loginController", function($scope, $http){
     $scope.formvalues= {
       name: "",
@@ -52,40 +65,28 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
   .controller('questionController', function($http, $scope, $routeParams) {
     $scope.name = "questionController";
     $scope.params = $routeParams;
-    var id = $routeParams.questionID -1;
-
-    $http.get('https://blacajojo.herokuapp.com/questions'+id)
-      .then(function (response){
-        $rootScope.questions = response.data;
-        $rootScope.question = response.data[2];
-      });
+    var id = $routeParams.question_id -1;
 
     $http.get('https://blacajojo.herokuapp.com/questions')
       .then(function (response){
-        $rootScope.answers = response.data[id];
+        $scope.question = response.data[id];
+
+        $scope.answers = response.data[id].answers;
       });
 
   })
 
   .config(function($routeProvider, $locationProvider){
     $routeProvider
-      .when('/question/:questionId',{
+      .when('/question/:question_id',{
         templateUrl: 'question.html',
         controller: 'questionController'
       });
 
 
-  })
+  });
 
-    // INDEX
-    .run(function($http, $rootScope){
-      $http.get('https://blacajojo.herokuapp.com/questions')
-      // $http.get('../questions.json')
-        .then(function (response){
-          console.log(arguments);
-          $rootScope.questions = response.data;
-          });
-        });
+
 
 
         // QUESTION SHOW
@@ -94,7 +95,7 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
         //   // $http.get('../questions.json')
         //     .then(function (response){
         //       console.log(arguments);
-        //       $rootScope.question = response.data[2];
+        //       $rootScope.question = response.data[6];
         //
         //
         //       });
