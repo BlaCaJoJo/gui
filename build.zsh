@@ -6,6 +6,8 @@ echo 'Step 1: Copy all the HTML'
 cp src/index.html dist/
 cp src/login.html dist/
 cp src/question.html dist/
+cp src/signup.html dist/
+cp src/home.html dist/
 # mkdir dist/partials/
 # cp -r src/partials dist/
 
@@ -34,6 +36,14 @@ cp bower_components/angular/angular.js dist/bower_components/angular/angular.js
 
 mkdir -p dist/bower_components/angular-route/
 cp bower_components/angular-route/angular-route.js dist/bower_components/angular-route/angular-route.js
+
+mkdir -p dist/bower_components/font-awesome/css/
+cp bower_components/font-awesome/css/font-awesome.css dist/bower_components/font-awesome/css/font-awesome.css
+
+mkdir -p dist/bower_components/font-awesome/fonts/
+cp bower_components/font-awesome/fonts/fontawesome-webfont.ttf dist/bower_components/font-awesome/fonts/fontawesome-webfont.ttf
+cp bower_components/font-awesome/fonts/fontawesome-webfont.woff dist/bower_components/font-awesome/fonts/fontawesome-webfont.woff
+cp bower_components/font-awesome/fonts/fontawesome-webfont.woff2 dist/bower_components/font-awesome/fonts/fontawesome-webfont.woff2
 
 cp questions.json dist/
 
