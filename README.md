@@ -1,3 +1,6 @@
 # gui
 Front End Magic
-daf
+
+workflow: BlaCaJoJo.pdf
+
+API: https://github.com/BlaCaJoJo/api
