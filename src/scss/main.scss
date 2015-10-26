@@ -116,6 +116,14 @@ main.container {
 header {
   width: 80%;
   margin: 0 auto;
+
+    a[href] {
+      font-weight: lighter !important;
+      color: #000000;
+      font-size: 20pt;
+    }
+
+
 }
 
 

@@ -27,6 +27,18 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
 
 }) //END .MODULE
 
+
+  // INDEX
+  .run(function($http, $rootScope){
+    $http.get('https://blacajojo.herokuapp.com/questions')
+    // $http.get('../questions.json')
+      .then(function (response){
+        console.log(arguments);
+        $rootScope.questions = response.data;
+        });
+      })
+
+
   .controller("loginController", function($scope, $http){
     $scope.formvalues= {
       name: "",
@@ -38,43 +50,64 @@ angular.module('Stack-Undertow', ['ngRoute'], function($routeProvider){
     $scope.submit= function(){
       $http.post("https://blacajojo.herokuapp.com/members", $scope.formvalues)
       .then(function (response){
-        console.log("can you hear me? please god hear me",response);
+
       });
     };
   })
 
+  .controller('mainController', function($scope, $route, $routeParams, $location) {
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
+  })
 
-    // INDEX
-    .run(function($http, $rootScope){
-      $http.get('https://blacajojo.herokuapp.com/questions')
-      // $http.get('../questions.json')
-        .then(function (response){
-          console.log(arguments);
-          $rootScope.questions = response.data;
+  .controller('questionController', function($http, $scope, $routeParams) {
+    $scope.name = "questionController";
+    $scope.params = $routeParams;
+    var id = $routeParams.question_id -1;
 
-          });
-        })
+    $http.get('https://blacajojo.herokuapp.com/questions')
+      .then(function (response){
+        $scope.question = response.data[id];
+        $scope.answer = response.data[id].answer;
+      });
+
+  })
+
+  .config(function($routeProvider, $locationProvider){
+    $routeProvider
+      .when('/question/:question_id',{
+        templateUrl: 'question.html',
+        controller: 'questionController'
+      });
+
+
+  });
+
+
 
 
         // QUESTION SHOW
-        .run(function($http, $rootScope){
-          $http.get('https://blacajojo.herokuapp.com/questions')
-          // $http.get('../questions.json')
-            .then(function (response){
-              console.log(arguments);
-              $rootScope.question = response.data[0];
-
-              });
-            })
+        // .run(function($http, $rootScope){
+        //   $http.get('https://blacajojo.herokuapp.com/questions')
+        //   // $http.get('../questions.json')
+        //     .then(function (response){
+        //       console.log(arguments);
+        //       $rootScope.question = response.data[6];
+        //
+        //
+        //       });
+        //     });
 
           // ANSWERS
-          .run(function($http, $rootScope){
-             $http.get('https://blacajojo.herokuapp.com/answers')
-               .then(function (response){
-                 console.log(arguments);
-                 $rootScope.answers = response.data;
-                 });
-               });
+          // .run(function($http, $rootScope){
+          //   $http.get('https://blacajojo.herokuapp.com/questions')
+          //   // $http.get('../questions.json')
+          //     .then(function (response){
+          //       console.log(arguments);
+          //       $rootScope.answers = response.data[2];
+          //       });
+          //     });
 
 
 
